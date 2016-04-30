@@ -7,6 +7,7 @@
 #include <iostream> // Input output stream
 #include <fstream> // File stream
 #include <string>
+#include <stdio.h> // For remove?
 using namespace std;
 
 int main()
@@ -15,7 +16,7 @@ int main()
     string day;
     string strNew = "SUMMARY:";
 
-    cout << "Please enter the month the same way it's written in the file you downloaded. [Example: 04]: ";
+    cout << "Hi! Make sure your calendar file is in the same location as this program.\n\nPlease enter the month the same way it's written in the file you downloaded. [Example: 04]: ";
     cin >> month;
     cout << "\nNow please, enter the day the same way: ";
     cin >> day;
@@ -29,7 +30,7 @@ int main()
     
     ifstream inFile;
     inFile.open(fileName);
-    ofstream outFile("Schedule.ics");
+    ofstream outFile("New Schedule.ics");
     
     if (!inFile)
     {
@@ -45,6 +46,8 @@ int main()
         
         outFile << strTemp << "\n";
     }
+
+    remove(fileName.c_str());
+    cout << "Thanks for using!" << endl;
     
-    // Todo: remove old file and make outFile the same as fileName to avoid confusion
 }
