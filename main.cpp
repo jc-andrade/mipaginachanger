@@ -45,4 +45,6 @@ int main()
         
         outFile << strTemp << "\n";
     }
+    
+    // Todo: remove old file and make outFile the same as fileName to avoid confusion
 }
