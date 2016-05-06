@@ -1,6 +1,7 @@
 /* 
- Created by Julio Andrade, all rights reserved. Do not distribute.
- This program takes input an .ics file (calendar file) and changes the summaryof the event to make it shorter
+ Created by Julio Andrade, all rights reserved. 
+    Do not distribute.
+    This program takes input an .ics file (calendar file) and changes the summaryof the event to make it shorter
  Written for Fruit Stand employees to use with their schedules
  */
 
@@ -16,7 +17,7 @@ int main()
     string day;
     string strNew = "SUMMARY:";
 
-    cout << "Hi! Make sure your calendar file is in the same location as this program.\n\nPlease enter the month the same way it's written in the file you downloaded. [Example: 04]: ";
+    cout << "Hi! Make sure your calendar file is on the desktop.\n\nPlease enter the month the same way it's written in the file you downloaded. [Example: 04]: ";
     cin >> month;
     cout << "\nNow please, enter the day the same way: ";
     cin >> day;
@@ -34,7 +35,8 @@ int main()
     
     if (!inFile)
     {
-        cout << "Error opening files!\nFollow the instructions carefully!" << endl;
+        cout << "Error opening files!\nFollow the instructions carefully and re-run!" << endl;
+	return 0;
     }
     
     string strTemp;
@@ -49,5 +51,4 @@ int main()
 
     remove(fileName.c_str());
     cout << "Thanks for using!" << endl;
-    
 }
