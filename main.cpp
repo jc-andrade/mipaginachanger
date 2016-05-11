@@ -19,7 +19,7 @@ int main()
     string day;
     string strNew = "SUMMARY:";
 
-    cout << "Hi! Make sure your calendar file is on the desktop.\n\nPlease enter the month the same way it's written in the file you downloaded. [Example: 04]: ";
+    cout << "Hi! Make sure your calendar file is on the same directory as this program.\n\nPlease enter the month the same way it's written in the file you downloaded. [Example: 04]: ";
     cin >> month;
     cout << "\nNow please, enter the day the same way: ";
     cin >> day;
